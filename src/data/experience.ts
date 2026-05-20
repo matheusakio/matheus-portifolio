@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
     role: 'Engenheiro de Software',
     startDate: 'jun/2021',
     endDate: 'jan/2024',
-    description: 'Globalsys é líder em soluções de tecnologia para varejo e e-commerce. Desenvolvi soluções mobile e web para Wine.com.br (maior e-commerce de vinhos do Brasil) e AvaliaGab. Implementei features de checkout, gestão de pedidos, integrações de pagamento e experiências omnichannel. As soluções desenvolvidas contribuíram para o crescimento significativo das plataformas de e-commerce.',
+    description: 'Globalsys é líder em soluções de tecnologia para varejo e e-commerce. Desenvolvi soluções mobile e web para Wine.com.br (maior clube de vinho do mundo) e AvaliaGab. Implementei features de checkout, gestão de pedidos, integrações de pagamento e experiências omnichannel. As soluções desenvolvidas contribuíram para o crescimento significativo das plataformas de e-commerce.',
     technologies: ['React Native', 'React', 'TypeScript', 'Firebase', 'Integrações de Pagamento', 'Checkout Digital'],
   },
   {

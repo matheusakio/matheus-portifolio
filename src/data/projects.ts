@@ -43,7 +43,7 @@ export const projects: Project[] = [
     name: 'Wine',
     category: 'E-commerce',
     description:
-      'Atuação em soluções mobile e web para a Wine, uma das maiores plataformas de e-commerce de vinhos do Brasil, com foco em experiência de compra, performance, sustentação de app e processo de publicação nas lojas.',
+      'Atuação em soluções mobile e web para a Wine, o maior clube de vinho do mundo, com foco em experiência de compra, performance, sustentação de app e processo de publicação nas lojas.',
     technologies: [
       'React Native',
       'React',

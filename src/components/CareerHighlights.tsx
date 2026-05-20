@@ -28,7 +28,7 @@ const mainHighlights = [
     eyebrow: 'Carreira',
     title: 'Maior tech da América Latina',
     description:
-      'Atuação como engenheiro de software na SONDA, uma das maiores empresas de tecnologia da América Latina, em projetos financeiros de alta complexidade.',
+      'Atuação como engenheiro de software na SONDA, a maior empresa de tecnologia da América Latina, em projetos financeiros de alta complexidade.',
     badge: 'SONDA • Banking • Mobile',
     gradient:
       'from-sky-500/20 via-violet-500/15 to-fuchsia-500/10',
