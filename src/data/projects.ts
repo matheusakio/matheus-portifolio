@@ -123,7 +123,7 @@ export const projects: Project[] = [
       'Créditos de Carbono',
     ],
     logo: '/logos/ambify.png',
-    type: 'mobile',
+    type: 'web3',
     featured: true,
   },
   {

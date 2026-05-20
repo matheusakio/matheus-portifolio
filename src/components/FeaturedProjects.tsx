@@ -66,7 +66,7 @@ export const FeaturedProjects: React.FC = () => {
 
         <motion.div
           variants={stagger}
-          className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+          className="grid gap-4 sm:gap-6 sm:grid-cols-2 xl:grid-cols-3"
         >
           {featuredProjects.map((project: Project) => {
             const Icon = typeIcons[project.type];
@@ -76,51 +76,54 @@ export const FeaturedProjects: React.FC = () => {
                 key={project.id}
                 variants={fadeUp}
                 whileHover={{ y: -8 }}
-                className="group relative flex min-h-[540px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/55 p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:border-sky-400/40 hover:bg-slate-900/75"
+                className="group relative flex min-h-[450px] sm:min-h-[540px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/55 p-5 sm:p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:border-sky-400/40 hover:bg-slate-900/75"
               >
                 {/* Glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-sky-500/[0.03] via-transparent to-fuchsia-500/[0.03]" />
 
                 {/* HEADER */}
-             <div className="relative mb-8 flex min-h-[70px] items-start justify-between gap-4">
-                <ProjectLogo src={project.logo} name={project.name} />
+             <div className="relative mb-6 flex min-h-[60px] sm:min-h-[70px] sm:mb-8 items-start justify-between gap-3 sm:gap-4">
+                <div className="flex-1 min-w-0">
+                  <ProjectLogo src={project.logo} name={project.name} />
+                </div>
 
-                <span className="mt-1 inline-flex shrink-0 items-center gap-1 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-bold text-sky-300">
-                  <Icon size={13} />
-                  {typeLabels[project.type]}
+                <span className="mt-1 inline-flex shrink-0 items-center gap-1 rounded-full border border-sky-400/20 bg-sky-400/10 px-2.5 py-0.5 text-[10px] font-bold text-sky-300 sm:px-3 sm:py-1 sm:text-xs">
+                  <Icon className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="hidden sm:inline">{typeLabels[project.type]}</span>
+                  <span className="sm:hidden">{project.type}</span>
                 </span>
               </div>
 
                 {/* TITLE */}
                 <div className="relative">
-                  <h3 className="text-[2rem] font-black leading-tight text-white">
+                  <h3 className="text-xl font-black leading-tight text-white sm:text-[2rem]">
                     {project.name}
                   </h3>
 
-                  <p className="mt-2 text-sm font-semibold text-violet-300">
+                  <p className="mt-2 text-xs font-semibold text-violet-300 sm:text-sm">
                     {project.category}
                   </p>
                 </div>
 
                 {/* IMPACT */}
                 {project.impact && (
-                  <div className="relative mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-3 py-1 text-xs font-bold text-fuchsia-200">
-                    <Users size={13} />
+                  <div className="relative mt-4 sm:mt-5 inline-flex w-fit items-center gap-1.5 sm:gap-2 rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-2.5 py-0.5 text-[10px] font-bold text-fuchsia-200 sm:px-3 sm:py-1 sm:text-xs">
+                    <Users className="h-3 w-3 sm:h-4 sm:w-4" />
                     {project.impact}
                   </div>
                 )}
 
                 {/* DESCRIPTION */}
-                <p className="relative mt-6 flex-1 text-[15px] leading-8 text-slate-400">
+                <p className="relative mt-4 flex-1 text-xs leading-6 text-slate-400 sm:mt-6 sm:text-[15px] sm:leading-8">
                   {project.description}
                 </p>
 
                 {/* TECHS */}
-                <div className="relative mt-8 flex flex-wrap gap-2">
+                <div className="relative mt-5 flex flex-wrap gap-1.5 sm:mt-8 sm:gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-slate-300"
+                      className="rounded-xl border border-white/10 bg-white/[0.04] px-2 py-1 text-[10px] font-medium text-slate-300 sm:px-3 sm:py-1.5 sm:text-xs"
                     >
                       {tech}
                     </span>

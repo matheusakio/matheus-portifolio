@@ -28,12 +28,12 @@ export const experiences: Experience[] = [
     technologies: ['React Native', 'React', 'TypeScript', 'Firebase', 'Integrações de Pagamento', 'Checkout Digital'],
   },
   {
-    id: 'zesto',
-    company: 'Zesto',
+    id: 'pd7tech',
+    company: 'Pd7 Tech',
     role: 'Engenheiro de Software',
     startDate: 'mar/2022',
     endDate: 'dez/2022',
-    description: 'Zesto é especializada em soluções tecnológicas para setores de petróleo, energia e indústria. Desenvolvi aplicações mobile e web para gestão operacional, monitoramento de ativos e soluções industriais. Os sistemas desenvolvidos permitiram maior eficiência operacional e controle em tempo real para empresas do setor energético.',
+    description: 'Pd7 Tech é especializada em soluções tecnológicas para setores de petróleo, energia e indústria. Desenvolvi aplicações mobile e web para gestão operacional, monitoramento de ativos e soluções industriais. Os sistemas desenvolvidos permitiram maior eficiência operacional e controle em tempo real para empresas do setor energético.',
     technologies: ['Next.js', 'React Native', 'TypeScript', 'Node.js', 'IoT', 'Monitoramento Industrial'],
   },
   {
@@ -47,11 +47,11 @@ export const experiences: Experience[] = [
   },
   {
     id: 'noruh',
-    company: 'Noruh',
+    company: 'Happe',
     role: 'Engenheiro de Software',
     startDate: 'fev/2020',
     endDate: 'set/2021',
-    description: 'Noruh é especializada em soluções digitais para startups e empresas em crescimento. Desenvolvi aplicações mobile e web desde o MVP até produtos escaláveis. Trabalhei com metodologias ágeis e desenvolvimento rápido de produtos, entregando soluções que ajudaram startups a escalar suas operações digitais.',
+    description: 'Happe é especializada em soluções digitais para startups e empresas em crescimento. Desenvolvi o aplicativo Noruh e outras aplicações mobile e web desde o MVP até produtos escaláveis. Trabalhei com metodologias ágeis e desenvolvimento rápido de produtos, entregando soluções que ajudaram startups a escalar suas operações digitais.',
     technologies: ['React Native', 'React', 'TypeScript', 'Node.js', 'Agile Development', 'MVP Development'],
   },
 ];

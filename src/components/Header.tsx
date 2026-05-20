@@ -43,14 +43,14 @@ export const Header: React.FC = () => {
           : 'bg-[#050816]/35 backdrop-blur-md'
       }`}
     >
-      <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 lg:px-8">
-        <button onClick={() => goTo('#hero')} className="text-left text-lg font-black tracking-tight">
+      <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <button onClick={() => goTo('#hero')} className="text-left text-base font-black tracking-tight sm:text-lg">
           <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-sky-400 bg-clip-text text-transparent">
             Akio Tech
           </span>
         </button>
 
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex lg:gap-7">
           {navItems.map((item) => (
             <button
               key={item.name}
@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-200 lg:hidden"
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-200 lg:hidden"
           aria-label="Abrir menu"
         >
           {open ? <X size={20} /> : <Menu size={20} />}

@@ -51,7 +51,7 @@ export const Integrations: React.FC = () => {
           </p>
         </motion.div>
 
-        <motion.div variants={stagger} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <motion.div variants={stagger} className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {integrations.map((integration) => {
             const Icon = integration.icon;
             return (
@@ -59,16 +59,16 @@ export const Integrations: React.FC = () => {
                 key={integration.name}
                 variants={fadeUp}
                 whileHover={{ y: -7 }}
-                className="rounded-3xl border border-white/10 bg-slate-900/55 p-5 text-center shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:border-sky-400/40"
+                className="rounded-3xl border border-white/10 bg-slate-900/55 p-4 text-center shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:border-sky-400/40 sm:p-5"
               >
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400/20 to-violet-500/20">
-                  <Icon className="h-7 w-7 text-sky-300" />
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400/20 to-violet-500/20 sm:mb-5 sm:h-14 sm:w-14">
+                  <Icon className="h-6 w-6 text-sky-300 sm:h-7 sm:w-7" />
                 </div>
-                <h3 className="text-lg font-black text-white">{integration.name}</h3>
-                <p className="mt-3 min-h-[66px] text-sm leading-6 text-slate-400">{integration.description}</p>
-                <div className="mt-4 flex flex-wrap justify-center gap-2">
+                <h3 className="text-base font-black text-white sm:text-lg">{integration.name}</h3>
+                <p className="mt-2 min-h-[48px] text-xs leading-5 text-slate-400 sm:mt-3 sm:min-h-[60px] sm:text-sm sm:leading-6">{integration.description}</p>
+                <div className="mt-3 flex flex-wrap justify-center gap-1.5 sm:mt-4 sm:gap-2">
                   {integration.badges.map((badge) => (
-                    <span key={badge} className="rounded-full border border-sky-400/20 bg-sky-400/10 px-2.5 py-1 text-[11px] font-semibold text-sky-300">
+                    <span key={badge} className="rounded-full border border-sky-400/20 bg-sky-400/10 px-2 py-0.5 text-[10px] font-semibold text-sky-300 sm:px-2.5 sm:py-1 sm:text-[11px]">
                       {badge}
                     </span>
                   ))}

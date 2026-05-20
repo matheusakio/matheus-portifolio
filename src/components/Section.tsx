@@ -17,11 +17,11 @@ export const Section: React.FC<SectionProps> = ({ children, className = '', id }
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.16 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.65, ease: 'easeOut' }}
-      className={`relative py-20 md:py-24 ${className}`}
+      className={`relative py-16 sm:py-20 md:py-24 ${className}`}
     >
-      <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">{children}</div>
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
     </motion.section>
   );
 };

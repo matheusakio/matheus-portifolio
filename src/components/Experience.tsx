@@ -25,9 +25,9 @@ export const Experience: React.FC = () => {
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-5 top-0 h-full w-px bg-gradient-to-b from-sky-400 via-violet-500 to-fuchsia-500 md:left-1/2 md:-translate-x-1/2" />
+          <div className="absolute left-3 top-0 h-full w-px bg-gradient-to-b from-sky-400 via-violet-500 to-fuchsia-500 md:left-1/2 md:-translate-x-1/2" />
 
-          <div className="space-y-10">
+          <div className="space-y-6 sm:space-y-10">
             {experiences.map((exp, index) => {
               const isSonda = exp.id === 'sonda';
               const isLeft = index % 2 === 0;
@@ -37,59 +37,60 @@ export const Experience: React.FC = () => {
                   key={exp.id}
                   initial={{ opacity: 0, y: 34 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.18 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.55, delay: index * 0.06 }}
-                  className={`relative grid gap-6 md:grid-cols-2 ${
+                  className={`relative md:grid md:grid-cols-2 md:gap-6 ${
                     isLeft ? '' : 'md:[&>div:first-child]:col-start-2'
                   }`}
                 >
-                  <div className={isLeft ? 'md:pr-12' : 'md:pl-12'}>
+                  <div className={`pl-9 md:pl-0 ${isLeft ? 'md:pr-12' : 'md:pl-12'}`}>
                     <motion.div
                       whileHover={{ y: -6 }}
-                      className={`relative rounded-3xl p-6 shadow-2xl shadow-black/20 backdrop-blur-xl transition ${
+                      className={`relative rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl shadow-black/20 backdrop-blur-xl transition ${
                         isSonda
                           ? 'border border-sky-400/50 bg-gradient-to-br from-sky-400/15 via-slate-900/70 to-violet-500/15'
                           : 'border border-white/10 bg-slate-900/55 hover:border-sky-400/35'
                       }`}
                     >
                       {isSonda && (
-                        <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-300/25 bg-sky-400/15 px-3 py-1 text-xs font-bold text-sky-200">
-                          <Globe2 size={13} />
-                          Maior tech da América Latina
+                        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-300/25 bg-sky-400/15 px-2.5 py-0.5 text-[10px] font-bold text-sky-200 sm:mb-5 sm:px-3 sm:py-1 sm:text-xs">
+                          <Globe2 className="h-3 w-3 sm:h-4 sm:w-4" />
+                          <span className="hidden sm:inline">Maior tech da América Latina</span>
+                          <span className="sm:hidden">Maior tech da LATAM</span>
                         </div>
                       )}
 
-                      <div className="mb-5 flex items-start gap-4">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300">
-                          <Building2 size={22} />
+                      <div className="mb-4 flex items-start gap-3 sm:mb-5 sm:gap-4">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 sm:h-12 sm:w-12">
+                          <Building2 className="h-5 w-5 sm:h-6 sm:w-6" />
                         </div>
 
-                        <div>
-                          <h3 className="text-2xl font-black text-white">
+                        <div className="min-w-0 flex-1">
+                          <h3 className="text-lg font-black text-white sm:text-2xl">
                             {exp.company}
                           </h3>
-                          <p className="mt-1 text-sm font-bold text-sky-300">
+                          <p className="mt-1 text-xs font-bold text-sky-300 sm:text-sm">
                             {exp.role}
                           </p>
                         </div>
                       </div>
 
-                      <div className="mb-5 flex items-center gap-2 text-sm text-slate-400">
-                        <Calendar size={16} />
+                      <div className="mb-4 flex items-center gap-2 text-xs text-slate-400 sm:mb-5 sm:text-sm">
+                        <Calendar className="h-4 w-4 sm:h-5 sm:w-5" />
                         <span>
                           {exp.startDate} - {exp.endDate}
                         </span>
                       </div>
 
-                      <p className="text-sm leading-7 text-slate-400">
+                      <p className="text-xs leading-6 text-slate-400 sm:text-sm sm:leading-7">
                         {exp.description}
                       </p>
 
-                      <div className="mt-6 flex flex-wrap gap-2">
+                      <div className="mt-4 flex flex-wrap gap-1.5 sm:mt-6 sm:gap-2">
                         {exp.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className={`rounded-lg border px-2.5 py-1 text-xs ${
+                            className={`rounded-lg border px-2 py-0.5 text-[10px] sm:px-2.5 sm:py-1 sm:text-xs ${
                               isSonda
                                 ? 'border-sky-400/25 bg-sky-400/10 text-sky-200'
                                 : 'border-white/10 bg-white/[0.04] text-slate-300'
@@ -103,8 +104,8 @@ export const Experience: React.FC = () => {
                   </div>
 
                   <div
-                    className={`absolute left-5 top-8 z-10 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-[#0B1020] bg-gradient-to-r from-sky-400 to-violet-500 md:left-1/2 ${
-                      isSonda ? 'h-6 w-6 shadow-lg shadow-sky-400/40' : ''
+                    className={`absolute left-3 top-6 z-10 h-3 w-3 -translate-x-1/2 rounded-full border-4 border-[#0B1020] bg-gradient-to-r from-sky-400 to-violet-500 md:left-1/2 sm:left-4 sm:top-8 sm:h-4 sm:w-4 ${
+                      isSonda ? 'h-4 w-4 sm:h-6 sm:w-6 shadow-lg shadow-sky-400/40' : ''
                     }`}
                   />
                 </motion.article>

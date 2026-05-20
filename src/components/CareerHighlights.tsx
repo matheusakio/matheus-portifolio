@@ -93,7 +93,7 @@ export const CareerHighlights: React.FC = () => {
         </motion.div>
 
         {/* CARDS PRINCIPAIS */}
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-4 sm:gap-5 lg:grid-cols-2">
           {mainHighlights.map((item, index) => {
             const Icon = item.icon;
 
@@ -108,30 +108,30 @@ export const CareerHighlights: React.FC = () => {
                   delay: index * 0.08,
                 }}
                 whileHover={{ y: -6 }}
-                className={`relative overflow-hidden rounded-[2rem] border ${item.border} bg-gradient-to-br ${item.gradient} p-7 shadow-2xl shadow-black/20 backdrop-blur-xl`}
+                className={`relative overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] border ${item.border} bg-gradient-to-br ${item.gradient} p-5 sm:p-7 shadow-2xl shadow-black/20 backdrop-blur-xl`}
               >
                 <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
 
                 <div className="relative">
-                  <div className="mb-6 flex items-center justify-between gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-white ring-1 ring-white/10">
-                      <Icon size={26} />
+                  <div className="mb-5 flex items-center justify-between gap-3 sm:mb-6 sm:gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-white ring-1 ring-white/10 sm:h-14 sm:w-14">
+                      <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
                     </div>
 
-                    <span className="rounded-full border border-white/10 bg-white/[0.08] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/80">
+                    <span className="rounded-full border border-white/10 bg-white/[0.08] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.16em] text-white/80 sm:px-3 sm:py-1 sm:text-[10px] sm:tracking-[0.18em]">
                       {item.eyebrow}
                     </span>
                   </div>
 
-                  <h3 className="text-3xl font-black tracking-[-0.04em] text-white md:text-[2.2rem]">
+                  <h3 className="text-2xl font-black tracking-[-0.04em] text-white sm:text-3xl md:text-[2.2rem]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300 md:text-[15px]">
+                  <p className="mt-3 max-w-xl text-xs leading-6 text-slate-300 sm:mt-4 sm:text-sm sm:leading-7 md:text-[15px]">
                     {item.description}
                   </p>
 
-                  <div className="mt-6 inline-flex rounded-full border border-white/10 bg-white/[0.08] px-4 py-2 text-[11px] font-bold text-white/90">
+                  <div className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.08] px-3 py-1.5 text-[10px] font-bold text-white/90 sm:mt-6 sm:px-4 sm:py-2 sm:text-[11px]">
                     {item.badge}
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export const CareerHighlights: React.FC = () => {
         </div>
 
         {/* CARDS SECUNDÁRIOS */}
-        <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-4 grid gap-3 sm:mt-5 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
           {secondaryHighlights.map((item, index) => {
             const Icon = item.icon;
 
@@ -156,17 +156,17 @@ export const CareerHighlights: React.FC = () => {
                   delay: 0.15 + index * 0.08,
                 }}
                 whileHover={{ y: -7 }}
-                className="rounded-3xl border border-white/10 bg-slate-900/55 p-5 shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:border-sky-400/35 hover:bg-slate-900/75"
+                className="rounded-3xl border border-white/10 bg-slate-900/55 p-4 shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:border-sky-400/35 hover:bg-slate-900/75 sm:p-5"
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300">
-                  <Icon size={22} />
+                <div className="mb-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-sky-400/10 text-sky-300 sm:mb-5 sm:h-12 sm:w-12">
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
 
-                <h3 className="text-lg font-black text-white">
+                <h3 className="text-base font-black text-white sm:text-lg">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-slate-400">
+                <p className="mt-2 text-xs leading-5 text-slate-400 sm:mt-3 sm:text-sm sm:leading-6">
                   {item.description}
                 </p>
               </motion.article>

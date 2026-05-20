@@ -68,12 +68,12 @@ export const ProjectLogo = ({ src, name }: ProjectLogoProps) => {
   }
 
   return (
-    <div className="flex h-[70px] w-[190px] items-center">
+    <div className="flex h-[60px] w-full max-w-[160px] sm:h-[70px] sm:max-w-[190px] items-center">
       <div
         className="relative"
         style={{
-          width: `${config.width}px`,
-          height: `${config.height}px`,
+          width: `${config.width * 0.85}px`,
+          height: `${config.height * 0.85}px`,
         }}
       >
         <Image
