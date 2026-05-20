@@ -28,7 +28,7 @@ export const Web3: React.FC = () => {
       <div className="absolute right-[-18%] top-[10%] h-[520px] w-[520px] rounded-full bg-orange-500/10 blur-[140px]" />
       <div className="absolute left-[20%] top-[20%] h-[420px] w-[420px] rounded-full bg-fuchsia-500/10 blur-[140px]" />
 
-      <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="relative z-10">
+      <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} className="relative z-10">
         <motion.div variants={fadeUp} className="mb-10">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.32em] text-orange-300">Experiência com Web3 e Cripto</p>
           <h2 className="text-4xl font-black tracking-[-0.04em] text-white md:text-5xl">

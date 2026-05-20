@@ -20,7 +20,7 @@ const categoryIcons: Record<string, React.ComponentType<{ className?: string }>>
 export const Skills: React.FC = () => {
   return (
     <Section id="skills" className="border-y border-white/10 bg-[#08101f]/80">
-      <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+      <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
         <motion.div variants={fadeUp} className="mb-10">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.32em] text-violet-300">Skills & Tecnologias</p>
           <h2 className="text-4xl font-black tracking-[-0.04em] text-white md:text-5xl">Stack de atuação.</h2>

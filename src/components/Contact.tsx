@@ -13,7 +13,7 @@ export const Contact: React.FC = () => {
 
   return (
     <Section id="contact" className="bg-[#050816]">
-      <motion.div variants={fadeUp} className="rounded-[1.5rem] border border-white/10 bg-slate-900/55 p-5 shadow-2xl shadow-black/25 backdrop-blur-xl sm:rounded-[2rem] sm:p-6 md:p-10">
+      <motion.div variants={fadeUp} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.6 }} className="rounded-[1.5rem] border border-white/10 bg-slate-900/55 p-5 shadow-2xl shadow-black/25 backdrop-blur-xl sm:rounded-[2rem] sm:p-6 md:p-10">
         <div className="grid gap-6 sm:gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.32em] text-fuchsia-300 sm:mb-3">Entre em contato</p>

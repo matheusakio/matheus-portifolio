@@ -48,7 +48,7 @@ const integrations = [
 export const Integrations: React.FC = () => {
   return (
     <Section id="integrations" className="bg-[#050816]">
-      <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+      <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
         <motion.div variants={fadeUp} className="mb-10">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.32em] text-sky-300">Integrações financeiras</p>
           <h2 className="text-4xl font-black tracking-[-0.04em] text-white md:text-5xl">Pagamentos e wallets digitais.</h2>

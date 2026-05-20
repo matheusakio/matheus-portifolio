@@ -25,12 +25,12 @@ export const FeaturedProjects: React.FC = () => {
   const featuredProjects = projects.filter((p: Project) => p.featured);
 
   return (
-    <Section id="projects" className="bg-[#050816]">
+    <Section id="projects" className="bg-[#050816] relative z-10">
       <motion.div
         variants={stagger}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.05 }}
       >
         <motion.div
           variants={fadeUp}
@@ -66,7 +66,7 @@ export const FeaturedProjects: React.FC = () => {
 
         <motion.div
           variants={stagger}
-          className="grid gap-4 sm:gap-6 sm:grid-cols-2 xl:grid-cols-3"
+          className="grid gap-4 sm:gap-6 sm:grid-cols-2 xl:grid-cols-3 overflow-visible"
         >
           {featuredProjects.map((project: Project) => {
             const Icon = typeIcons[project.type];
@@ -77,13 +77,13 @@ export const FeaturedProjects: React.FC = () => {
                 key={project.id}
                 variants={fadeUp}
                 whileHover={{ y: -8 }}
-                className="group relative flex min-h-[450px] sm:min-h-[540px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/55 p-5 sm:p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:border-sky-400/40 hover:bg-slate-900/75"
+                className="group relative flex min-h-[400px] sm:min-h-[450px] min-h-[350px] sm:min-h-[540px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/55 p-5 sm:p-7 shadow-2xl shadow-black/20 backdrop-blur-xl transition hover:border-sky-400/40 hover:bg-slate-900/75"
               >
                 {/* Glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-sky-500/[0.03] via-transparent to-fuchsia-500/[0.03]" />
 
                 {/* HEADER */}
-             <div className="relative mb-6 flex min-h-[60px] sm:min-h-[70px] sm:mb-8 items-start justify-between gap-3 sm:gap-4">
+             <div className="relative mb-6 flex min-h-[80px] sm:min-h-[90px] sm:mb-8 items-start justify-between gap-3 sm:gap-4">
                 <div className="flex-1 min-w-0">
                   <ProjectLogo src={project.logo} name={project.name} />
                 </div>

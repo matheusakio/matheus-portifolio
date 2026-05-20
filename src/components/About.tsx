@@ -45,7 +45,7 @@ export const About: React.FC = () => {
           variants={stagger}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="flex flex-col"
         >
           <motion.p variants={fadeUp} className="mb-3 text-xs font-bold uppercase tracking-[0.32em] text-fuchsia-300 sm:mb-4">
@@ -78,7 +78,7 @@ export const About: React.FC = () => {
           variants={stagger}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="grid gap-3 sm:gap-4 sm:grid-cols-2"
         >
           {differentials.map((item) => {
