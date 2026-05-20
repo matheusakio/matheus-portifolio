@@ -28,6 +28,15 @@ export const experiences: Experience[] = [
     technologies: ['React Native', 'React', 'TypeScript', 'Firebase', 'Integrações de Pagamento', 'Checkout Digital'],
   },
   {
+    id: 'shipay',
+    company: 'Shipay',
+    role: 'Engenheiro de Software',
+    startDate: 'jan/2023',
+    endDate: 'jul/2023',
+    description: 'Shipay é uma fintech inovadora que revolucionou o mercado de pagamentos digitais no Brasil, processando milhões de transações mensais. Atuei no desenvolvimento de plataformas de pagamento, integrações financeiras complexas e APIs que conectam comerciantes a soluções modernas de processamento. Foi uma experiência transformadora que consolidou minha expertise em fintech e pagamentos digitais.',
+    technologies: ['React Native', 'TypeScript', 'Node.js', 'Pagamentos', 'APIs REST', 'Integrações Financeiras', 'Fintech'],
+  },
+  {
     id: 'pd7tech',
     company: 'Pd7 Tech',
     role: 'Engenheiro de Software',

@@ -16,8 +16,8 @@ type LogoConfig = {
 
 const logoStyles: Record<string, LogoConfig> = {
   Banestes: {
-    width: 120,
-    height: 36,
+    width: 150,
+    height: 45,
   },
   Wine: {
     width: 48,
@@ -29,28 +29,32 @@ const logoStyles: Record<string, LogoConfig> = {
     height: 38,
   },
   MedSoft: {
-    width: 130,
-    height: 38,
+    width: 515,
+    height: 153,
   },
   MedMe: {
-    width: 130,
-    height: 38,
+    width: 515,
+    height: 153,
   },
   'Atacadão Dia a Dia': {
-    width: 125,
-    height: 42,
+    width: 230,
+    height: 85,
   },
   Ambify: {
-    width: 125,
-    height: 38,
+    width: 343,
+    height: 102,
   },
   PetroRio: {
-    width: 125,
-    height: 38,
+    width: 230,
+    height: 70,
+  },
+  Shipay: {
+    width: 268,
+    height: 80,
   },
   default: {
-    width: 125,
-    height: 38,
+    width: 220,
+    height: 66,
   },
 };
 

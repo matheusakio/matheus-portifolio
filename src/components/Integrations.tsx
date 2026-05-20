@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Apple, CreditCard, Lock, Smartphone, Watch } from 'lucide-react';
+import { Apple, CreditCard, Lock, Smartphone, Watch, Building2 } from 'lucide-react';
 import { Section } from './Section';
 import { fadeUp, stagger } from './motion';
 
@@ -37,6 +37,12 @@ const integrations = [
     description: 'Gateway para checkout, APIs financeiras e pagamentos online.',
     badges: ['API', 'Security', 'Payments'],
   },
+  {
+    icon: Building2,
+    name: 'Shipay',
+    description: 'Fintech que processa milhões de transações e revolucionou pagamentos digitais no Brasil.',
+    badges: ['Fintech', 'Payments', 'API'],
+  },
 ];
 
 export const Integrations: React.FC = () => {
@@ -51,7 +57,7 @@ export const Integrations: React.FC = () => {
           </p>
         </motion.div>
 
-        <motion.div variants={stagger} className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <motion.div variants={stagger} className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {integrations.map((integration) => {
             const Icon = integration.icon;
             return (

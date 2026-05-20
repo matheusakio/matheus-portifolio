@@ -7,7 +7,7 @@ import { Section } from './Section';
 import { fadeUp, stagger } from './motion';
 
 export const Web3: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'kotai' | 'ambify'>('kotai');
+  const [activeTab, setActiveTab] = useState<'kotai' | 'ambify'>('ambify');
 
   const features = [
     { icon: Wallet, title: 'Wallet Integration', description: 'Integração com carteiras digitais e autenticação Web3.' },
@@ -43,16 +43,6 @@ export const Web3: React.FC = () => {
         <motion.div variants={fadeUp} className="mb-8">
           <div className="inline-flex rounded-2xl border border-white/10 bg-slate-900/50 p-1.5 backdrop-blur-xl">
             <button
-              onClick={() => setActiveTab('kotai')}
-              className={`relative rounded-xl px-6 py-3 text-sm font-bold transition-all sm:px-8 sm:py-3.5 sm:text-base ${
-                activeTab === 'kotai'
-                  ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/20'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              Kotai Wallet
-            </button>
-            <button
               onClick={() => setActiveTab('ambify')}
               className={`relative rounded-xl px-6 py-3 text-sm font-bold transition-all sm:px-8 sm:py-3.5 sm:text-base ${
                 activeTab === 'ambify'
@@ -61,6 +51,16 @@ export const Web3: React.FC = () => {
               }`}
             >
               Ambify
+            </button>
+            <button
+              onClick={() => setActiveTab('kotai')}
+              className={`relative rounded-xl px-6 py-3 text-sm font-bold transition-all sm:px-8 sm:py-3.5 sm:text-base ${
+                activeTab === 'kotai'
+                  ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/20'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              Kotai Wallet
             </button>
           </div>
         </motion.div>

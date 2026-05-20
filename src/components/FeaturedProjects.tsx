@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { projects, Project } from '@/src/data/projects';
-import { Smartphone, Globe, Wallet, Users } from 'lucide-react';
+import { Smartphone, Globe, Wallet, Users, BookOpen, GraduationCap } from 'lucide-react';
 
 import { Section } from './Section';
 import { ProjectLogo } from './ProjectLogo';
@@ -70,6 +70,7 @@ export const FeaturedProjects: React.FC = () => {
         >
           {featuredProjects.map((project: Project) => {
             const Icon = typeIcons[project.type];
+            const isMedGrupo = project.id === 'medsoft';
 
             return (
               <motion.article
@@ -105,18 +106,66 @@ export const FeaturedProjects: React.FC = () => {
                   </p>
                 </div>
 
+                {/* MEDGRUPO - DESIGN MELHORADO */}
+                {isMedGrupo && (
+                  <div className="relative mt-4 sm:mt-5 space-y-4">
+                    <p className="text-xs leading-6 text-slate-400 sm:text-sm sm:leading-7">
+                      Ecossistema de soluções digitais educacionais para área médica, com foco em performance, conteúdo e usabilidade mobile.
+                    </p>
+                    
+                    <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        className="relative rounded-2xl border border-violet-400/20 bg-gradient-to-br from-violet-500/10 to-purple-500/10 p-3 sm:p-4 backdrop-blur-sm transition"
+                      >
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-violet-400/20 sm:h-10 sm:w-10">
+                            <GraduationCap className="h-4 w-4 text-violet-300 sm:h-5 sm:w-5" />
+                          </div>
+                          <h4 className="text-sm font-black text-white sm:text-base">MedSoft</h4>
+                        </div>
+                        <p className="text-[10px] leading-4 text-slate-400 sm:text-xs">
+                          Solução educacional para estudantes e profissionais da área médica.
+                        </p>
+                      </motion.div>
+
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        className="relative rounded-2xl border border-purple-400/20 bg-gradient-to-br from-purple-500/10 to-violet-500/10 p-3 sm:p-4 backdrop-blur-sm transition"
+                      >
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-purple-400/20 sm:h-10 sm:w-10">
+                            <BookOpen className="h-4 w-4 text-purple-300 sm:h-5 sm:w-5" />
+                          </div>
+                          <h4 className="text-sm font-black text-white sm:text-base">MedMe</h4>
+                        </div>
+                        <p className="text-[10px] leading-4 text-slate-400 sm:text-xs">
+                          Aplicação educacional para jornada médica e funcionalidades para alunos.
+                        </p>
+                      </motion.div>
+                    </div>
+
+                    <div className="inline-flex items-center gap-1.5 rounded-full border border-violet-400/20 bg-violet-400/10 px-2.5 py-0.5 text-[10px] font-bold text-violet-200 sm:px-3 sm:py-1 sm:text-xs">
+                      <Users className="h-3 w-3 sm:h-4 sm:w-4" />
+                      40 mil assinantes ativos
+                    </div>
+                  </div>
+                )}
+
                 {/* IMPACT */}
-                {project.impact && (
+                {project.impact && !isMedGrupo && (
                   <div className="relative mt-4 sm:mt-5 inline-flex w-fit items-center gap-1.5 sm:gap-2 rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-2.5 py-0.5 text-[10px] font-bold text-fuchsia-200 sm:px-3 sm:py-1 sm:text-xs">
                     <Users className="h-3 w-3 sm:h-4 sm:w-4" />
                     {project.impact}
                   </div>
                 )}
 
-                {/* DESCRIPTION */}
-                <p className="relative mt-4 flex-1 text-xs leading-6 text-slate-400 sm:mt-6 sm:text-[15px] sm:leading-8">
-                  {project.description}
-                </p>
+                {/* DESCRIPTION (NÃO MEDGRUPO) */}
+                {!isMedGrupo && (
+                  <p className="relative mt-4 flex-1 text-xs leading-6 text-slate-400 sm:mt-6 sm:text-[15px] sm:leading-8">
+                    {project.description}
+                  </p>
+                )}
 
                 {/* TECHS */}
                 <div className="relative mt-5 flex flex-wrap gap-1.5 sm:mt-8 sm:gap-2">

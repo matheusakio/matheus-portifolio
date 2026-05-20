@@ -45,9 +45,9 @@ const secondaryHighlights = [
   },
   {
     icon: CreditCard,
-    title: 'Integrações financeiras',
+    title: 'Fintech Shipay',
     description:
-      'Apple Pay, Samsung Pay, Google Pay, Garmin Pay, Pagar.me e APIs bancárias.',
+      'Shipay processa milhões de transações mensais e revolucionou pagamentos digitais no Brasil. Atuação consolidada em fintech.',
   },
   {
     icon: Store,

@@ -74,11 +74,11 @@ export const projects: Project[] = [
   },
   {
     id: 'medsoft',
-    name: 'MedSoft',
+    name: 'MedGrupo',
     category: 'Educação Médica',
     description:
-      'Solução digital educacional para estudantes e profissionais da área médica, com foco em performance, conteúdo, usabilidade e experiência mobile.',
-    technologies: ['React Native', 'React', 'TypeScript', 'Next.js', 'APIs REST', 'Design System'],
+      'Ecossistema de soluções digitais educacionais para área médica, com aplicações que atendem estudantes e profissionais. Desenvolvi o MedSoft e MedMe, focando em performance, conteúdo, usabilidade e experiência mobile otimizada.',
+    technologies: ['React Native', 'React', 'TypeScript', 'Next.js', 'APIs REST', 'Design System', 'Mobile UX'],
     logo: '/logos/medgrupo.png',
     type: 'mobile',
     featured: true,
@@ -93,7 +93,6 @@ export const projects: Project[] = [
     technologies: ['React Native', 'TypeScript', 'React', 'APIs REST', 'Mobile UX'],
     logo: '/logos/medgrupo.png',
     type: 'mobile',
-    featured: true,
   },
   {
     id: 'atacadao',
@@ -151,9 +150,12 @@ export const projects: Project[] = [
     name: 'Shipay',
     category: 'Fintechs',
     description:
-      'Soluções de pagamento digital e integrações financeiras para fluxo de pagamentos e experiência transacional.',
-    technologies: ['React Native', 'TypeScript', 'Node.js', 'Pagamentos', 'APIs REST'],
+      'Shipay é uma fintech inovadora que revolucionou o mercado de pagamentos digitais no Brasil, com soluções que processam milhões de transações mensais. Atuei no desenvolvimento de plataformas de pagamento integrações financeiras complexas e APIs que conectam comerciantes a soluções modernas de processamento, com foco em segurança, performance e experiência do usuário.',
+    technologies: ['React Native', 'TypeScript', 'Node.js', 'Pagamentos', 'APIs REST', 'Integrações Financeiras', 'Fintech'],
+    logo: '/logos/shipay.png',
     type: 'web',
+    featured: true,
+    impact: 'Fintech de alto impacto',
   },
   {
     id: 'noruh',
