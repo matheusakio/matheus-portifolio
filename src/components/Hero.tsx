@@ -44,9 +44,9 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.65 }}
             className="max-w-5xl text-5xl font-black tracking-[-0.05em] text-white md:text-7xl lg:text-8xl"
           >
-            Matheus Akio{' '}
+            Matheus{' '}
             <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-sky-400 bg-clip-text text-transparent">
-              Eloy Ezaki
+              Akio
             </span>
           </motion.h1>
 
