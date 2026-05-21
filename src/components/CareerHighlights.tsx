@@ -44,12 +44,6 @@ const secondaryHighlights = [
       'Experiência em desenvolvimento, manutenção, evolução e publicação de aplicativos mobile em produção.',
   },
   {
-    icon: CreditCard,
-    title: 'Fintech Shipay',
-    description:
-      'Shipay processa milhões de transações mensais e revolucionou pagamentos digitais no Brasil. Atuação consolidada em fintech.',
-  },
-  {
     icon: Store,
     title: 'Processo de loja',
     description:

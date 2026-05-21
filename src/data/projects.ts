@@ -155,7 +155,6 @@ export const projects: Project[] = [
     logo: '/logos/shipay.png',
     type: 'web',
     featured: true,
-    impact: 'Fintech de alto impacto',
   },
   {
     id: 'noruh',
